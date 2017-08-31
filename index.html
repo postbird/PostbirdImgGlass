@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript图片放大镜</title>
+    <script src="./js/postbird-img-glass.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        hr{
+            margin:10px 0;
+        }
+        .container{
+            margin:0 auto;
+            width:70%;
+            text-align: center;
+            padding:50px;
+        }
+        h1,h3,h4{
+            margin:20px 0;
+        }
+        .img-container{
+            padding:50px;
+        }
+        .img-container img{
+            border:solid 1px #cccccc;
+            padding:5px;
+            border-radius: 5px;
+        }
+        .desc{
+            text-align: left;
+        }
+        pre{
+            border:solid 1px #cccccc;
+            background-color:#fdfdfd;
+            padding-top:10px;
+            font-size:15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Postbird-img-glass.js </h1>
+        <h4>javascript 图片放大镜</h4>
+        <small>点击图片可以查看效果</small>
+        <div class='img-container'>
+            <img src="./img/demo1.png" alt="demo1">
+            <img src="./img/demo2.png" alt="demo2">
+        </div>
+        <hr> 
+        <div class="desc">
+            <h3>说明：</h3>
+            <pre>
+                    *   图片放大镜
+                    *   Author : Postbird
+                    *   Website: http://www.ptbird.cn
+                    *   License: MIT
+            </pre>
+                <h3> 引入方式：</h3>
+                <pre>
+                    src="./js/postbird-img-glass.js
+                </pre>
+                <h3> 使用方式：</h3>
+                <pre>
+                    // 示例中使用的方式
+                    PostbirdPictureMagnifyingGlass.init({
+                        domSelector:".img-container img",
+                        animation:true
+                    });
+                </pre>
+                <h3> 参数说明：</h3>
+                <pre>
+                    init({})传入参数为对象
+                    * domSelector  - dom选择器             默认 img  
+                    * width        - 放大后图片宽度        默认 auto
+                    * height       - 放大后图片高度        默认 auto
+                    * boxClassName - 放大镜的容器的class   默认 postbird-img-glass-box
+                    * boxBgColor   - 放大镜容器的背景色   默认  rgba(0,0,0,0.8)
+                    * animation    - 是否开启CSS3动画     默认 false IE10+ 才有效
+                </pre>
+                <h3> 注意事项:</h3>
+                <pre>
+                    1. animation 使用css3动画，需要 IE10+
+                    2. 最低支持 IE9 ，事件监听使用 addEventListener
+                    3. 需要在文档加载完成后才能进行操作 
+                    4. css样式及动画可以将css复制并格式化后，自定义。
+                </pre>
+            
+        </div>
+    </div>
+</body>
+    <script>
+        PostbirdImgGlass.init({
+            domSelector:".img-container img",
+            animation:true
+        });
+    </script>
+</html>
