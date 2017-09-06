@@ -1,6 +1,10 @@
 # postbirdImageGlass
 postbird-img-glass.js 图片放大镜
 
+### 在线查看效果
+
+http://postbird.oschina.io/postbirdimgglass
+
 ### 优点：
 
 无缝接入，直接传入需要事件监听的DOM即可。
